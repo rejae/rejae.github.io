@@ -145,7 +145,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/hexo-help/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/few-shot-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -159,7 +159,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/04/04/hexo-help/" class="post-title-link" itemprop="url">hexo_help</a>
+            <a href="/2021/04/04/few-shot-learning/" class="post-title-link" itemprop="url">few-shot-learning</a>
         </h2>
 
         <div class="post-meta">
@@ -170,7 +170,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2021-04-04 14:15:32 / Modified: 14:16:34" itemprop="dateCreated datePublished" datetime="2021-04-04T14:15:32+08:00">2021-04-04</time>
+              <time title="Created: 2021-04-04 20:15:32 / Modified: 20:37:03" itemprop="dateCreated datePublished" datetime="2021-04-04T20:15:32+08:00">2021-04-04</time>
             </span>
 
           
@@ -184,15 +184,253 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="rejae-github-io"><a href="#rejae-github-io" class="headerlink" title="rejae.github.io"></a>rejae.github.io</h1><h1 id="https-medium-com-bebebobohaha-E4-BD-BF-E7-94-A8-hexo-gitpage-E6-90-AD-E5-BB-BA-E5-80-8B-E4-BA-BA-blog-5c6ed52f23db"><a href="#https-medium-com-bebebobohaha-E4-BD-BF-E7-94-A8-hexo-gitpage-E6-90-AD-E5-BB-BA-E5-80-8B-E4-BA-BA-blog-5c6ed52f23db" class="headerlink" title="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db"></a><a target="_blank" rel="noopener" href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db">https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db</a></h1><p>環境配置<br>安裝 Node.js<br>安裝 Git<br>安裝 Hexo<br>上述兩個安裝完之後，接著執行下方指令即可安裝Hexo。<br>$ npm install -g hexo-cli<br>使用 Hexo<br>安裝完Hexo 後，執行下方指令，Hexo 就會在指定資料夾 <folder> 中新建所需要的的檔案。記得將 <folder> 替換名稱喔～<br>$ hexo init <folder><br>$ cd <folder><br>$ npm install</p>
-<p>_config.yml：網站 配置 檔案，可以在此配置大部分的設定。<br>package.json：套件版本控制<br>scaffolds：鷹架 資料夾。建立新文章時，會根據 scaffold 來建立檔案。<br>source：原始檔案資料夾是放置內容的地方。<br>themes：主題 資料夾。Hexo 會根據主題來產生靜態檔案。</p>
-<p>$ hexo g<br>$ hexo s</p>
-<p>hexo generate (hexo g) 產生靜態檔案，會在目錄下產生public 資料夾。<br>hexo server (hexo s) 啟動伺服器，預設是 <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a><br>hexo deploy (hexo d) 部署網站。（ 比如 github, heroku 等平台 ）</p>
-<p>$ hexo new “postName” # 新建文章<br>$ hexo new page “pageName” # 新建頁面</p>
-<p>$ hexo d -g # 產生靜態檔後部署<br>$ hexo s -g # 產生靜態檔後預覽</p>
-<p>更換主題<br>NexT<br>Hexo 預設的主題是landscape，而我們可以到 這裡 來挑選我們想要的主題，而其中最多人用的應該就屬 NexT 了。<br>安裝NexT<br>$ git clone <a target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next.git">https://github.com/theme-next/hexo-theme-next.git</a> themes/next<br>接著修改網站設定_config.yml<br>theme: next<br>重新啟動server<br>$ hexo server</p>
-<p>語言設定<br>在_config.yml中找到language，設定為zh-tw<br>language: zh-tw<br>這樣就可已支援繁體中文。<br>Scheme 設定<br>在NexT 中有多種Scheme 可選擇，其中的預設主題為Muse。大部份看到蠻多人選擇使用Pisces當主題。<br>在主題設定theme/next/_config.yml裡找到schema，把註解去掉即可開啟。<br>#scheme: Muse<br>#scheme: Mist<br>scheme: Pisces<br>#scheme: Gemini<br>代碼高亮<br>NexT 使用 Tomorrow Theme 當作代碼高亮，共有5款主題可以選擇。 NexT 預設使用的是 normal，可選的值有 normal、night、 night blue、 night bright、 night eighties<br>highlight_theme: normal<br>背景特效<br>在主題設定themes/next/_config.yml裡還有另外的動畫效果，要打開就把值設定為true。</p>
+          <h2 id="definition"><a href="#definition" class="headerlink" title="definition"></a>definition</h2><p>Few-shot classification aims to recognize unlabeled samples from unseen classes given only few labeled samples</p>
+<p>小样本学习（few shot learning）是元学习（meta learning）的一个子类，目标是learn to learn，跟监督学习的思路很不一样：</p>
+<ul>
+<li>【在大样本中学习】在领域1中使用大样本中学习得到距离函数，</li>
+<li>【在小样本中预测】在领域2中使用该距离函数找出最接近的样本，其类别就是预测结果。</li>
+</ul>
+<p>few-shot learning名字有歧义，其实并没有在小样本中学习，叫few-shot prediction会更贴切。</p>
+<p>领域1中的样本叫training set。</p>
+<p>领域2中的样本集叫support set，新预测的实例叫query sample</p>
+<p>三者关系如下图：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/rejae/rejae.github.io/tree/master/images">https://github.com/rejae/rejae.github.io/tree/master/images</a></p>
+<p><img src="https://raw.githubusercontent.com/rejae/rejae.github.io//tree/master/images/v2-d26c8c66b4a6b6e56fee09680d404f46_720w.jpg"></p>
+<p>support set有两个属性：k-way和n-shot</p>
+<p>k-way: support set中的类别数，上图为6，</p>
+<p>n-shot: support set中每一类的样本数，上图为1</p>
+<p>进一步，k和n对预测准确率的影响（如下图）：<br><img src="https://raw.githubusercontent.com/rejae/rejae.github.io//tree/master/images/v2-3bd5f57318b8637fb5b2afeea5e430f8_720w.jpg"></p>
+<h2 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h2><p><a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1910.07677.pdf">Cross Attention Network for Few-shot Classification</a></p>
 
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/04/start/" class="post-title-link" itemprop="url">start</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-04-04 14:24:18 / Modified: 14:39:54" itemprop="dateCreated datePublished" datetime="2021-04-04T14:24:18+08:00">2021-04-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="重整"><a href="#重整" class="headerlink" title="重整"></a>重整</h2><p>重新安装了博客，捣鼓了半天，一切就绪。</p>
+<p>需要好好做笔记，好好写博客，这样才能走的更远。</p>
+<p>毕业的事和工作的事以及爱情的事已经走上正轨了。</p>
+<p>仿佛一生的奋斗到了与喜悦相伴的时刻了。</p>
+<p>还是那句话： 好好吃饭，好好学习，好好娱乐，好好休息。</p>
+<p>临，谢谢你伴我度过了最艰难的岁月，往后的日子，我会朝着你的光亮，一直前行。</p>
+<h2 id="JD"><a href="#JD" class="headerlink" title="JD"></a>JD</h2><p>感谢JD，虽然我现在实力可能不够，但是接下来的日子，我会证明自己。</p>
+<h2 id="情愫"><a href="#情愫" class="headerlink" title="情愫"></a>情愫</h2><p>清空自己，净化自己，你本就是个正直阳光的人儿呐。</p>
+<h2 id="NLP"><a href="#NLP" class="headerlink" title="NLP"></a>NLP</h2><p>技术是你安身立命之根本。</p>
+<h2 id="规划"><a href="#规划" class="headerlink" title="规划"></a>规划</h2><p>环环相扣，一环缺失，环环尽落。</p>
+<ul>
+<li>晚上10点50洗漱完毕上床休息。</li>
+<li>8点起床洗漱&amp;运动</li>
+<li>9点准时上班工作</li>
+<li>午餐后回去好好放松眼睛和午休</li>
+<li>晚餐完了散散步好好放松</li>
+<li>晚上如果不忙总结一天所学和扩展学习</li>
+<li>22:00 听歌、运动、相依</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/slu_paper/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/04/slu_paper/" class="post-title-link" itemprop="url">slu papers</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-04-04 14:15:32 / Modified: 20:23:23" itemprop="dateCreated datePublished" datetime="2021-04-04T14:15:32+08:00">2021-04-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="整理口语意图识别论文"><a href="#整理口语意图识别论文" class="headerlink" title="整理口语意图识别论文"></a>整理口语意图识别论文</h2><h2 id="JD-AI-论文"><a href="#JD-AI-论文" class="headerlink" title="JD AI 论文"></a>JD AI 论文</h2><p><a href="">Building Robust Spoken Language Understanding by Cross Attention between Phoneme Sequence and ASR Hypothesis</a></p>
+<p>核心方法：<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1910.07677.pdf">Cross Attention Network for Few-shot Classification Ruibing</a></p>
+<h2 id="lattice"><a href="#lattice" class="headerlink" title="lattice"></a>lattice</h2><ul>
+<li>[6] F. Ladhak, A. Gandhe, M. Dreyer, L. Mathias, A. Rastrow, and B. Hoffmeister, “Latticernn: Recurrent neural networks over lat- tices.” in Interspeech, 2016, pp. 695–699.</li>
+<li>[7] C. Huang and Y. Chen, “Adapting pretrained transformer to lat- tices for spoken language understanding,” in 2019 IEEE Auto- matic Speech Recognition and Understanding Workshop (ASRU). IEEE, 2019, pp. 845–852.</li>
+<li>[8] C. Huang and Y. Chen, “Learning spoken language representa- tions with neural lattice language modeling,” in Proceedings of the 58th Annual Meeting of the Association for Computational Linguistics, 2020, pp. 3764–3769.</li>
+</ul>
+<h2 id="n-best"><a href="#n-best" class="headerlink" title="n-best"></a>n-best</h2><ul>
+<li>[9] F. Peng, S. Roy, B. Shahshahani, and F. Beaufays, “Search results based n-best hypothesis rescoring with maximum entropy classi- fication,” in 2013 IEEE Workshop on Automatic Speech Recogni- tion and Understanding. IEEE, 2013, pp. 422–427.</li>
+<li>[10] A. J. Kumar, C. Morales, M.-E. Vidal, C. Schmidt, and S. Auer, “Use of knowledge graph in rescoring the n-best list in automatic speech recognition,” arXiv preprint arXiv:1705.08018, 2017.</li>
+<li>[11] A. Ogawa, M. Delcroix, S. Karita, and T. Nakatani, “Rescoring n- best speech recognition list based on one-on-one hypothesis com- parison using encoder-classifier model,” in 2018 IEEE Interna- tional Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018, pp. 6099–6103.</li>
+<li>[12] A. Ogawa, M. Delcroix, S. Karita, and T. Nakatani, “Improved deep duel model for rescoring n-best speech recognition list using backward lstmlm and ensemble encoders,” in INTERSPEECH, 2019, pp. 3900–3904.</li>
+<li>[13] M. Li, X. Liu, W. Ruan, L. Soldaini, W. Hamza, and C. Su, “Multi-task learning of spoken language understanding by inte- grating n-best hypotheses with hierarchical attention,” in Proceed- ings ofthe 28th International Conference on Computational Lin- guistics: Industry Track, 2020, pp. 113–123.</li>
+<li>[14] M. Li, W. Ruan, X. Liu, L. Soldaini, W. Hamza, and C. Su, “Im- proving spoken language understanding by exploiting asr n-best hypotheses,” arXiv preprint arXiv:2001.05284, 2020.</li>
+</ul>
+<h2 id="word-confusion-network"><a href="#word-confusion-network" class="headerlink" title="word confusion network"></a>word confusion network</h2><ul>
+<li>[15] G. Tur, J. Wright, A. Gorin, G. Riccardi, and D. Hakkani-T¨ur, “Improving spoken language understanding using word confusion networks,” in Seventh International Conference on Spoken Lan- guage Processing, 2002.</li>
+<li>[16] D. Hakkani-T¨ur, F. B´echet, G. Riccardi, and G. Tur, “Beyond asr 1-best: Using word confusion networks in spoken language un- derstanding,” Computer Speech &amp; Language, vol. 20, no. 4, pp. 495–514, 2006.</li>
+<li>[17] M. Henderson, M. Gaˇsi´c, B. Thomson, P. Tsiakoulis, K. Yu, and S. Young, “Discriminative spoken language understanding using word confusion networks,” in 2012 IEEE Spoken Language Tech- nology Workshop (SLT). IEEE, 2012, pp. 176–181.</li>
+<li>[18] G. T¨ur, A. Deoras, and D. Hakkani-T¨ur, “Semantic parsing us- ing word confusion networks with conditional random fields.” in INTERSPEECH. Citeseer, 2013, pp. 2579–2583.</li>
+<li>[19] P. G. Shivakumar and P. Georgiou, “Confusion2vec: Towards en- riching vector space word representations with representational ambiguities,” PeerJ Computer Science, vol. 5, p. e195, 2019.</li>
+<li>[20] P. G. Shivakumar, M. Yang, and P. Georgiou, “Spoken lan- guage intent detection using confusion2vec,” arXiv preprint arXiv:1904.03576, 2019.</li>
+</ul>
+<h2 id="End2end-SLU"><a href="#End2end-SLU" class="headerlink" title="End2end SLU"></a>End2end SLU</h2><ul>
+<li>[21] P. Haghani, A. Narayanan, M. Bacchiani, G. Chuang, N. Gaur, P. Moreno, R. Prabhavalkar, Z. Qu, and A. Waters, “From audio to semantics: Approaches to end-to-end spoken language under- standing,” in 2018 IEEE Spoken Language Technology Workshop (SLT). IEEE, 2018, pp. 720–726.</li>
+<li>[22] D. Serdyuk, Y. Wang, C. Fuegen, A. Kumar, B. Liu, and Y. Ben- gio, “Towards end-to-end spoken language understanding,” in 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018, pp. 5754–5758.</li>
+<li>[23] L. Lugosch, M. Ravanelli, P. Ignoto, V. S. Tomar, and Y. Ben- gio, “Speech model pre-training for end-to-end spoken language understanding,” in Interspeech 2019, 2019.</li>
+<li>[24] N. Tomashenko, A. Caubri<code>ere, and Y. Est</code>eve, “Investigating adap- tation and transfer learning for end-to-end spoken language un- derstanding from speech,” in Interspeech 2019. ISCA, 2019, pp. 824–828</li>
+</ul>
+<h2 id="using-phoneme-data"><a href="#using-phoneme-data" class="headerlink" title="using phoneme data"></a>using phoneme data</h2><ul>
+<li>[25] P. Yenigalla, A. Kumar, S. Tripathi, C. Singh, S. Kar, and J. Vepa, “Speech emotion recognition using spectrogram &amp; phoneme em- bedding.” in Interspeech, 2018, pp. 3688–3692.</li>
+<li>[26] A. Fang, S. Filice, N. Limsopatham, and O. Rokhlenko, “Using phoneme representations to build predictive models robust to asr errors,” in Proceedings ofthe 43rd International ACMSIGIR Con- ference on Research and Development in Information Retrieval, 2020, pp. 699–708.</li>
+<li>[27] M. N. Sundararaman, A. Kumar, and J. Vepa, “Phoneme-bert: Joint language modelling of phoneme sequence and asr tran- script,” arXiv preprint arXiv:2102.00804, 2021.</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/04/meaningful_life/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/04/04/meaningful_life/" class="post-title-link" itemprop="url">life</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2021-04-04 14:15:32 / Modified: 16:41:43" itemprop="dateCreated datePublished" datetime="2021-04-04T14:15:32+08:00">2021-04-04</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="吃"><a href="#吃" class="headerlink" title="吃"></a>吃</h2><p>龙森园 火锅  琴台路60号 | 人均130</p>
+<p>境斋茶舍 西安中路62号商务楼顶楼801 | 人均60</p>
+<h2 id="喝"><a href="#喝" class="headerlink" title="喝"></a>喝</h2><h2 id="玩"><a href="#玩" class="headerlink" title="玩"></a>玩</h2><h2 id="乐"><a href="#乐" class="headerlink" title="乐"></a>乐</h2>
       
     </div>
 
@@ -234,8 +472,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2021-04-04 12:17:18" itemprop="dateCreated datePublished" datetime="2021-04-04T12:17:18+08:00">2021-04-04</time>
+              <time title="Created: 2021-04-04 12:17:18 / Modified: 14:43:21" itemprop="dateCreated datePublished" datetime="2021-04-04T12:17:18+08:00">2021-04-04</time>
             </span>
 
           
@@ -262,6 +501,130 @@
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h2 id="hexo-help"><a href="#hexo-help" class="headerlink" title="hexo help"></a>hexo help</h2><p><a target="_blank" rel="noopener" href="https://medium.com/@bebebobohaha/%E4%BD%BF%E7%94%A8-hexo-gitpage-%E6%90%AD%E5%BB%BA%E5%80%8B%E4%BA%BA-blog-5c6ed52f23db">hexo help</a></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/10/26/markdown_grammar/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2019/10/26/markdown_grammar/" class="post-title-link" itemprop="url">MarkDown Grammar</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-10-26 00:00:00" itemprop="dateCreated datePublished" datetime="2019-10-26T00:00:00+08:00">2019-10-26</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-04-04 20:35:17" itemprop="dateModified" datetime="2021-04-04T20:35:17+08:00">2021-04-04</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p id = "build"></p>
+---
+
+<p><a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/rejae/rejae.github.io//tree/master/images/">https://raw.githubusercontent.com/rejae/rejae.github.io//tree/master/images/</a></p>
+<ol>
+<li>用户冷启动<font color=red>（重点）</font></li>
+</ol>
+<p><strong>这是加粗的文字</strong></p>
+<p><em>这是倾斜的文字</em>`</p>
+<p><em><strong>这是斜体加粗的文字</strong></em></p>
+<p><del>这是加删除线的文字</del></p>
+<hr>
+<blockquote>
+<p>这是引用的内容</p>
+<blockquote>
+<p>这是引用的内容</p>
+</blockquote>
+</blockquote>
+<hr>
+<p>![图片alt](图片地址 ‘’图片title’’)<br>![](<a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/rejae/rejae.github.io/master/img/">https://raw.githubusercontent.com/rejae/rejae.github.io/master/img/</a><br>20191028attention.jpg)<br>![blockchain](<a target="_blank" rel="noopener" href="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/">https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/</a><br>u=702257389,1274025419&amp;fm=27&amp;gp=0.jpg “区块链”)</p>
+<hr>
+<p><a href="%E8%B6%85%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80" title="超链接title">超链接名</a><br>title可加可不加</p>
+<p><a target="_blank" rel="noopener" href="http://jianshu.com/">简书</a><br><a target="_blank" rel="noopener" href="http://baidu.com/">百度</a></p>
+<hr>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<ul>
+<li>列表内容</li>
+</ul>
+<hr>
+<p>1.列表内容<br>2.列表内容<br>3.列表内容</p>
+<hr>
+<p>列表嵌套<br>上一级和下一级之间敲三个空格即可</p>
+<p>一级无序列表内容</p>
+<pre><code>二级无序列表内容
+二级无序列表内容
+二级无序列表内容
+   
+    三级
+</code></pre>
+<hr>
+<p><strong>表格</strong><br>姓名|技能|排行<br>–|:–:|–:<br>刘备|哭|大哥<br>关羽|打|二哥<br>张飞|骂|三弟</p>
+<hr>
+<p>代码块</p>
+<p>(<code>)     function fun()&#123;          echo &quot;这是一句非常牛逼的代码&quot;;     &#125;     fun(); (</code>)</p>
+<hr>
+<p>流程图</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st&#x3D;&gt;start: 开始</span><br><span class="line">op&#x3D;&gt;operation: My Operation</span><br><span class="line">cond&#x3D;&gt;condition: Yes or No?</span><br><span class="line">e&#x3D;&gt;end</span><br><span class="line">st-&gt;op-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br><span class="line">&amp;</span><br></pre></td></tr></table></figure>
+
+<p>A<sub> i </sub></p>
+<p>a<sup> i </sup></p>
+<p>α<br>β<br>γ<br>δ<br>ε<br>ζ<br>η<br>θ<br>ι<br>κ<br>λ<br>μ<br>ν<br>ξ<br>ο<br>π<br>ρ<br>σ<br>τ<br>υ<br>φ<br>χ<br>ψ<br>ω</p>
+<p>㏒㏑</p>
+<p>∑</p>
+<p>∏<br>∅<br>±﹢<br>∮<br>∫<br>∬<br>∭<br>∂<br>∆</p>
 
       
     </div>
@@ -343,9 +706,13 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
       </div>
   </nav>
 </div>
