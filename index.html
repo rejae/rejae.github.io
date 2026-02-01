@@ -230,7 +230,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/01/LLM%E9%A2%84%E8%AE%AD%E7%BB%83/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/08/01/LLM_pretrain/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/viv.png">
@@ -244,7 +244,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2025/08/01/LLM%E9%A2%84%E8%AE%AD%E7%BB%83/" class="post-title-link" itemprop="url">大模型预训练</a>
+            <a href="/2025/08/01/LLM_pretrain/" class="post-title-link" itemprop="url">大模型预训练</a>
         </h2>
 
         <div class="post-meta">
@@ -261,7 +261,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-02-01 22:03:12" itemprop="dateModified" datetime="2026-02-01T22:03:12+08:00">2026-02-01</time>
+                <time title="修改时间：2026-02-01 22:29:28" itemprop="dateModified" datetime="2026-02-01T22:29:28+08:00">2026-02-01</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -287,7 +287,7 @@
           <h2 id="预训练"><a href="#预训练" class="headerlink" title="预训练"></a>预训练</h2><p>从算法的角度来看，大模型预训练（Large Model Pre-training）是指在大规模无标注或弱标注数据集上，通过自监督学习（Self-supervised Learning）等算法策略，对一个参数量巨大的神经网络模型进行<strong>初步参数优化</strong>的过程。</p>
 <p>其核心目标是让模型学习到通用的数据表征能力（如语言的统计规律、语义结构、上下文关系等），为后续的微调（Fine-tuning）或下游任务（如分类、问答、生成等）提供良好的初始化参数。</p>
 <p>下面从几个关键算法维度来诠释大模型预训练：</p>
-<h2 id="1-目标函数设计：自监督学习"><a href="#1-目标函数设计：自监督学习" class="headerlink" title="1. 目标函数设计：自监督学习"></a>1. 目标函数设计：自监督学习</h2><p>大模型预训练通常不依赖人工标注标签，而是通过构造代理任务（pretext tasks）从原始数据中自动生成监督信号。典型例子包括：<br>语言建模（Language Modeling）：<br>自回归语言模型（如 GPT 系列）：最大化序列的联合概率:<img src="/./max_likelihood.png" alt="max_likelihood"> ，使用下一个词预测作为目标。<br>掩码语言建模（Masked Language Modeling, MLM，如 BERT）：随机掩盖输入中的一些 token，让模型预测被掩盖的内容，即最大化:</p>
+<h2 id="1-目标函数设计：自监督学习"><a href="#1-目标函数设计：自监督学习" class="headerlink" title="1. 目标函数设计：自监督学习"></a>1. 目标函数设计：自监督学习</h2><p>大模型预训练通常不依赖人工标注标签，而是通过构造代理任务（pretext tasks）从原始数据中自动生成监督信号。典型例子包括：<br>语言建模（Language Modeling）：<br>自回归语言模型（如 GPT 系列）：最大化序列的联合概率:<img src="/images/max_likelihood.png" alt="max_likelihood"> ，使用下一个词预测作为目标。<br>掩码语言建模（Masked Language Modeling, MLM，如 BERT）：随机掩盖输入中的一些 token，让模型预测被掩盖的内容</p>
 <p>对比学习（Contrastive Learning）：<br>在某些多模态大模型（如 CLIP）中，通过最大化正样本对（如图文对）的相似度，同时最小化负样本对的相似度，构建 InfoNCE 等损失函数。<br>这些目标函数本质上是在没有人工标签的情况下，从数据本身挖掘结构信息，从而驱动模型学习有意义的表示。</p>
 <h2 id="2-模型架构：Transformer-为核心"><a href="#2-模型架构：Transformer-为核心" class="headerlink" title="2. 模型架构：Transformer 为核心"></a>2. 模型架构：Transformer 为核心</h2><p>当前主流的大模型几乎都基于 Transformer 架构，因其具备以下优势：<br>并行计算能力强：相比 RNN，Transformer 可以高效利用 GPU&#x2F;TPU 进行大规模并行训练。<br>长距离依赖建模：通过自注意力机制（Self-Attention），模型能捕捉任意两个 token 之间的依赖关系。<br>可扩展性好：通过堆叠更多层、扩大隐藏维度、增加注意力头数等方式，可以轻松扩展至百亿甚至万亿参数规模。</p>
 <h2 id="3-优化算法与训练策略"><a href="#3-优化算法与训练策略" class="headerlink" title="3. 优化算法与训练策略"></a>3. 优化算法与训练策略</h2><p>由于模型规模巨大、数据量庞大，预训练对优化算法和工程实现提出极高要求：<br>优化器：常用 AdamW（带权重衰减的 Adam），因其在大规模训练中表现稳定。<br>学习率调度：采用 warmup + decay 策略（如线性 warmup 后余弦退火），避免初期训练不稳定。<br>梯度裁剪（Gradient Clipping）：防止梯度爆炸。<br>混合精度训练（Mixed Precision）：使用 FP16&#x2F;FP8 加速计算并节省显存。<br>分布式训练：结合数据并行、模型并行、流水线并行（如 ZeRO、Megatron-LM、DeepSpeed）等技术，在数千 GPU 上协同训练。</p>
