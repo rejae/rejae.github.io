@@ -20,19 +20,19 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="大模型（Large Language Models, LLMs）的发展史是人工智能从规则驱动走向数据驱动、从专用智能迈向通用智能的关键历程。以下按时间脉络系统梳理其发展过程，涵盖技术演进、代表性模型与关键转折点： 一、前奏阶段：符号主义 → 统计方法 → 神经网络萌芽（1950s–2017）   符号主义时代（1950s–1980s）核心思想：用人工编写的逻辑规则（如 if-then）模拟人类推理">
+  <meta name="description" content="算法题【最长公共子串】 vs 【最长公共子序列】 考察动态规划知识； 区分：如果题目强调 “连续” → 子串；如果说 “顺序不变，可删除字符” → 子序列  最长公共子串（Substring）使用 动态规划，dp[i][j] 表示以 A[i-1] 和 B[j-1] 结尾的公共子串长度只有当 A[i-1] &#x3D;&#x3D; B[j-1] 时，才能延续之前的匹配：dp[i][j] &#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大模型发展史">
-<meta property="og:url" content="http://example.com/2025/06/01/LLM%E5%8F%91%E5%B1%95%E5%8F%B2/index.html">
+<meta property="og:title" content="面试知识整理(1)">
+<meta property="og:url" content="http://example.com/2026/02/02/2026m2_interview/index.html">
 <meta property="og:site_name" content="viv Blog">
-<meta property="og:description" content="大模型（Large Language Models, LLMs）的发展史是人工智能从规则驱动走向数据驱动、从专用智能迈向通用智能的关键历程。以下按时间脉络系统梳理其发展过程，涵盖技术演进、代表性模型与关键转折点： 一、前奏阶段：符号主义 → 统计方法 → 神经网络萌芽（1950s–2017）   符号主义时代（1950s–1980s）核心思想：用人工编写的逻辑规则（如 if-then）模拟人类推理">
+<meta property="og:description" content="算法题【最长公共子串】 vs 【最长公共子序列】 考察动态规划知识； 区分：如果题目强调 “连续” → 子串；如果说 “顺序不变，可删除字符” → 子序列  最长公共子串（Substring）使用 动态规划，dp[i][j] 表示以 A[i-1] 和 B[j-1] 结尾的公共子串长度只有当 A[i-1] &#x3D;&#x3D; B[j-1] 时，才能延续之前的匹配：dp[i][j] &#x3D;">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-06-01T13:30:00.000Z">
-<meta property="article:modified_time" content="2026-02-01T13:46:40.135Z">
+<meta property="article:published_time" content="2026-02-02T14:30:00.000Z">
+<meta property="article:modified_time" content="2026-02-02T15:19:55.374Z">
 <meta property="article:author" content="Jie Qin">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://example.com/2025/06/01/LLM%E5%8F%91%E5%B1%95%E5%8F%B2/">
+<link rel="canonical" href="http://example.com/2026/02/02/2026m2_interview/">
 
 
 <script id="page-configurations">
@@ -45,7 +45,7 @@
   };
 </script>
 
-  <title>大模型发展史 | viv Blog</title>
+  <title>面试知识整理(1) | viv Blog</title>
   
 
 
@@ -166,7 +166,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2025/06/01/LLM%E5%8F%91%E5%B1%95%E5%8F%B2/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2026/02/02/2026m2_interview/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/viv.png">
@@ -179,7 +179,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          大模型发展史
+          面试知识整理(1)
         </h1>
 
         <div class="post-meta">
@@ -188,23 +188,17 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2025-06-01 21:30:00" itemprop="dateCreated datePublished" datetime="2025-06-01T21:30:00+08:00">2025-06-01</time>
+              <time title="创建时间：2026-02-02 22:30:00 / 修改时间：23:19:55" itemprop="dateCreated datePublished" datetime="2026-02-02T22:30:00+08:00">2026-02-02</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2026-02-01 21:46:40" itemprop="dateModified" datetime="2026-02-01T21:46:40+08:00">2026-02-01</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LLM/" itemprop="url" rel="index"><span itemprop="name">LLM</span></a>
+                  <a href="/categories/interview/" itemprop="url" rel="index"><span itemprop="name">interview</span></a>
                 </span>
             </span>
 
@@ -219,64 +213,58 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>大模型（Large Language Models, LLMs）的发展史是人工智能从规则驱动走向数据驱动、从专用智能迈向通用智能的关键历程。以下按时间脉络系统梳理其发展过程，涵盖技术演进、代表性模型与关键转折点：</p>
-<h2 id="一、前奏阶段："><a href="#一、前奏阶段：" class="headerlink" title="一、前奏阶段："></a>一、前奏阶段：</h2><p>符号主义 → 统计方法 → 神经网络萌芽（1950s–2017）</p>
-<ul>
-<li><ol>
-<li>符号主义时代（1950s–1980s）<br>核心思想：用人工编写的逻辑规则（如 if-then）模拟人类推理。<br>代表：专家系统（如DENDRAL化学分析系统）、知识图谱雏形。<br>局限：无法处理现实世界的模糊性与复杂性；规则难以穷尽。</li>
+        <h2 id="算法题"><a href="#算法题" class="headerlink" title="算法题"></a>算法题</h2><p>【最长公共子串】 vs 【最长公共子序列】</p>
+<p>考察动态规划知识；</p>
+<p>区分：如果题目强调 “连续” → 子串；如果说 “顺序不变，可删除字符” → 子序列</p>
+<ol>
+<li>最长公共子串（Substring）<br>使用 动态规划，dp[i][j] 表示以 A[i-1] 和 B[j-1] 结尾的公共子串长度<br>只有当 A[i-1] &#x3D;&#x3D; B[j-1] 时，才能延续之前的匹配：<br>dp[i][j] &#x3D; dp[i-1][j-1] + 1<br>否则 dp[i][j] &#x3D; 0（因为不连续就断了）</li>
 </ol>
-</li>
-<li><ol start="2">
-<li>统计学习时代（1990s–2012）<br>引入概率模型（如n-gram、隐马尔可夫模型 HMM）处理语言。<br>2003年：Bengio 提出神经网络语言模型（NNLM），首次将词嵌入（word embedding）引入NLP。<br>2013年：Google 发布 Word2Vec，高效学习词向量，奠定语义表征基础。</li>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">dp = [[<span class="number">0</span>]*(n+<span class="number">1</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(m+<span class="number">1</span>)]</span><br><span class="line">max_len = <span class="number">0</span></span><br><span class="line">end_pos = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, m+<span class="number">1</span>):</span><br><span class="line">    <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n+<span class="number">1</span>):</span><br><span class="line">        <span class="keyword">if</span> A[i-<span class="number">1</span>] == B[j-<span class="number">1</span>]:</span><br><span class="line">            dp[i][j] = dp[i-<span class="number">1</span>][j-<span class="number">1</span>] + <span class="number">1</span></span><br><span class="line">            <span class="keyword">if</span> dp[i][j] &gt; max_len:</span><br><span class="line">                max_len = dp[i][j]</span><br><span class="line">                end_pos = i</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            dp[i][j] = <span class="number">0</span>  <span class="comment"># 关键！不连续就归零</span></span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>最长公共子序列（Subsequence）<br>✅ 核心思想：<br>dp[i][j] 表示 A[:i] 和 B[:j] 的 LCS 长度<br>转移方程：</li>
 </ol>
-</li>
-<li><ol start="3">
-<li>深度学习兴起（2012–2017）<br>2012年：AlexNet 在 ImageNet 夺冠，引爆深度学习浪潮。<br>RNN&#x2F;LSTM 成为主流序列模型，但存在长程依赖弱、训练慢、难并行等问题。<br>2014年：Bahdanau 等提出注意力机制（Attention），改善机器翻译对齐问题。<br>✅ 此阶段为大模型奠定了数据（如ImageNet）、算力（GPU）、算法（词嵌入、注意力） 三大基础。</li>
-</ol>
-</li>
-</ul>
-<h2 id="二、奠基时刻："><a href="#二、奠基时刻：" class="headerlink" title="二、奠基时刻："></a>二、奠基时刻：</h2><p>Transformer 诞生（2017）<br>2017年：Google 发表划时代论文 《Attention Is All You Need》，提出 Transformer 架构。<br>完全基于自注意力机制（Self-Attention），抛弃循环结构。<br>支持并行训练，高效处理长文本。<br>成为所有现代大模型的统一架构基础。<br>🔑 Transformer 是大模型发展的“奇点”——没有它，就没有GPT、BERT或ChatGPT。</p>
-<h2 id="三、预训练范式确立（2018–2019）"><a href="#三、预训练范式确立（2018–2019）" class="headerlink" title="三、预训练范式确立（2018–2019）"></a>三、预训练范式确立（2018–2019）</h2><ul>
-<li><ol>
-<li>2018年：双雄并起<br>OpenAI 发布 GPT-1（1.17亿参数）：<br>基于 Transformer 解码器，采用自回归语言建模。<br>验证“预训练 + 微调”范式在多任务上的有效性。<br>Google 发布 BERT：<br>基于 Transformer 编码器，采用双向掩码语言建模（MLM）。<br>在理解类任务（如问答、分类）上大幅刷新SOTA。<br>📌 形成两大技术路线：生成式（GPT） vs 判别式（BERT）。</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>2019年：规模初显<br>GPT-2（15亿参数）发布，展示零样本生成能力，因安全顾虑未完全开源。<br>XLNet、RoBERTa 等改进模型涌现，优化训练策略。</li>
-</ol>
-</li>
-</ul>
-<h2 id="四、规模化爆发期：能力涌现（2020–2022）"><a href="#四、规模化爆发期：能力涌现（2020–2022）" class="headerlink" title="四、规模化爆发期：能力涌现（2020–2022）"></a>四、规模化爆发期：能力涌现（2020–2022）</h2><ul>
-<li><ol>
-<li>2020年：GPT-3 开启千亿时代<br>1750亿参数，训练数据达570GB。<br>核心突破：能力涌现（Emergent Abilities） —— 模型在达到一定规模后，自发掌握推理、代码生成、少样本学习等能力。<br>引入 Prompt Engineering（提示工程），用户通过自然语言指令引导模型，无需微调。</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>2021–2022：全球竞速<br>Google 发布 PaLM（5400亿参数），验证万亿级潜力。<br>Meta 开源 OPT，推动开放生态。<br>中国启动大模型战略：百度文心、阿里通义、智谱GLM、深度求索DeepSeek等相继发布。</li>
-</ol>
-</li>
-</ul>
-<h2 id="五、破圈普及期："><a href="#五、破圈普及期：" class="headerlink" title="五、破圈普及期："></a>五、破圈普及期：</h2><p>ChatGPT 与多模态（2022.11–2023）</p>
-<ul>
-<li><ol>
-<li>2022年11月：ChatGPT 爆发<br>基于 GPT-3.5 + RLHF（人类反馈强化学习）。<br>实现流畅对话、逻辑连贯、风格可控，月活破亿，引爆全球AI热潮。<br>标志：大模型从技术圈走向大众。</li>
-</ol>
-</li>
-<li><ol start="2">
-<li>2023年：多模态与国产崛起<br>GPT-4：支持图文输入，专业考试表现超人类。<br>Gemini 1.0（Google）：原生支持文本、图像、音频、视频。<br>国产模型集中发布：文心一言、通义千问、豆包、GLM-3 等。<br>Llama 2 开源（Meta），推动私有化部署。</li>
-</ol>
-</li>
-</ul>
-<h2 id="六、产业深化期："><a href="#六、产业深化期：" class="headerlink" title="六、产业深化期："></a>六、产业深化期：</h2><p>降本增效与垂直落地（2024–）</p>
-<p>核心趋势：<br>架构优化：采用 MoE（混合专家） 架构（如 Qwen3、GLM-4），在性能与成本间取得平衡。<br>开源普惠：DeepSeek-R1、Qwen2.5（Apache 2.0）、Llama 3.1 等推动中小企业接入。<br>行业适配：<br>医疗：辅助诊断、病历生成<br>金融：风控、投研报告<br>政务&#x2F;工业：智能客服、质检<br>超长上下文：Gemini 3、GPT-5 支持 1M+ tokens，处理整本书或长会议记录。</p>
-<h2 id="七、关键技术演进总结"><a href="#七、关键技术演进总结" class="headerlink" title="七、关键技术演进总结"></a>七、关键技术演进总结</h2><ul>
-<li>Transformer	并行化、长程依赖建模的基础架构</li>
-<li>预训练 + 微调	范式革命，实现知识迁移</li>
-<li>Prompt Engineering	降低使用门槛，激活零样本能力</li>
-<li>RLHF	对齐人类价值观，提升对话质量</li>
-<li>LoRA &#x2F; QLoRA	高效微调，降低算力需求</li>
-<li>MoE	动态激活专家子网络，提升推理效率</li>
-</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> A[i-<span class="number">1</span>] == B[j-<span class="number">1</span>]:</span><br><span class="line">    dp[i][j] = dp[i-<span class="number">1</span>][j-<span class="number">1</span>] + <span class="number">1</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    dp[i][j] = <span class="built_in">max</span>(dp[i-<span class="number">1</span>][j], dp[i][j-<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>最长公共子串</th>
+<th>最长公共子序列</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>连续性</td>
+<td>必须连续</td>
+<td>不必连续</td>
+</tr>
+<tr>
+<td>DP 状态含义</td>
+<td>以 i,j 结尾的连续匹配长度</td>
+<td>前 i,j 个字符的最优解</td>
+</tr>
+<tr>
+<td>不匹配时处理</td>
+<td><code>dp[i][j] = 0</code>（断开）</td>
+<td><code>dp[i][j] = max(上, 左)</code>（继承）</td>
+</tr>
+<tr>
+<td>结果位置</td>
+<td>需记录结束位置以回溯子串</td>
+<td>通常只需长度，回溯较复杂</td>
+</tr>
+<tr>
+<td>最大长度</td>
+<td>≤ min(len(A), len(B))</td>
+<td>可接近 min(len(A), len(B))，甚至等于</td>
+</tr>
+<tr>
+<td>应用场景</td>
+<td>文本相似片段检测、DNA 序列局部匹配</td>
+<td>编辑距离、版本 diff、生物序列比对</td>
+</tr>
+</tbody></table>
 
     </div>
 
@@ -291,10 +279,13 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2025/08/01/LLM_pretrain/" rel="next" title="大模型预训练">
-      大模型预训练 <i class="fa fa-chevron-right"></i>
+    <a href="/2026/02/01/%E5%A4%9C%E8%88%AA%E6%98%9F/" rel="prev" title="夜航星">
+      <i class="fa fa-chevron-left"></i> 夜航星
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2026/02/02/langgraph/" rel="next" title="langgraph-demo项目1">
+      langgraph-demo项目1 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -354,7 +345,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%89%8D%E5%A5%8F%E9%98%B6%E6%AE%B5%EF%BC%9A"><span class="nav-number">1.</span> <span class="nav-text">一、前奏阶段：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E5%A5%A0%E5%9F%BA%E6%97%B6%E5%88%BB%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">二、奠基时刻：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E9%A2%84%E8%AE%AD%E7%BB%83%E8%8C%83%E5%BC%8F%E7%A1%AE%E7%AB%8B%EF%BC%882018%E2%80%932019%EF%BC%89"><span class="nav-number">3.</span> <span class="nav-text">三、预训练范式确立（2018–2019）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E8%A7%84%E6%A8%A1%E5%8C%96%E7%88%86%E5%8F%91%E6%9C%9F%EF%BC%9A%E8%83%BD%E5%8A%9B%E6%B6%8C%E7%8E%B0%EF%BC%882020%E2%80%932022%EF%BC%89"><span class="nav-number">4.</span> <span class="nav-text">四、规模化爆发期：能力涌现（2020–2022）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%94%E3%80%81%E7%A0%B4%E5%9C%88%E6%99%AE%E5%8F%8A%E6%9C%9F%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">五、破圈普及期：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%AD%E3%80%81%E4%BA%A7%E4%B8%9A%E6%B7%B1%E5%8C%96%E6%9C%9F%EF%BC%9A"><span class="nav-number">6.</span> <span class="nav-text">六、产业深化期：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%83%E3%80%81%E5%85%B3%E9%94%AE%E6%8A%80%E6%9C%AF%E6%BC%94%E8%BF%9B%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">七、关键技术演进总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E6%B3%95%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">算法题</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
